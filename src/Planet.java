@@ -1,16 +1,17 @@
 public class Planet {
 
-    public String id;
-    public String name;
-    public Double diameter;
-    public Double massKg;
-    public Double kmFromSun;
+    private String id;
+    private String name;
+    private Double diameterKm;
+    private Double massKg;
+    private Double kmFromSun;
 
-    public Planet(String id, String name, Double diameter, Double masskg, Double kmFromSun){
+    public Planet(String id, String name, Double diameterKm, Double massKg, Double kmFromSun){
 
         this.id = id;
         this.name = name;
-        this.diameter = diameter;
+        this.massKg = massKg;
+        this.diameterKm = diameterKm;
         this.kmFromSun = kmFromSun;
     }
 
@@ -23,7 +24,7 @@ public class Planet {
     }
 
     public Double diameter() {
-        return diameter;
+        return diameterKm;
     }
 
     public Double massKg(){
@@ -35,7 +36,8 @@ public class Planet {
     }
 
     public Double volume() {
-        Double v = (4/3) * pi * (diameter()/2)3;
+        //Double v = (4/3) * pi * (diameter()/2)3;
+        Double v = (4/3) * 3.1416 * (diameter()/2);
         return v;
     }
 

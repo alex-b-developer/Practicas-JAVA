@@ -1,4 +1,6 @@
-public class Main {
+package ej1;
+
+public class App {
     public static void main(String[] args) {
         System.out.println("Welcome to the Solar System:\n");
 

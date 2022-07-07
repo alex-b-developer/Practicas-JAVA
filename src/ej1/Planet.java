@@ -1,3 +1,5 @@
+package ej1;
+
 public class Planet {
 
     private String id;

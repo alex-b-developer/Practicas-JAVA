@@ -1,10 +1,11 @@
+package ej1;
+
 import java.util.ArrayList;
 
 public class SolarSystem {
 
     private static final Double gravityConstant = 6.67d;
     private ArrayList<Planet> orbits;
-
 
     public SolarSystem(){
         this.orbits = new ArrayList<Planet>();
@@ -18,7 +19,6 @@ public class SolarSystem {
         this.orbits.add(new Planet("7", "Uranus", 51118d, 86.8d, 2867.0d));
         this.orbits.add(new Planet("8", "Neptune", 49528d, 102d, 4515.0d));
         this.orbits.add(new Planet("9", "Pluto", 2376d, 0.0130d, 5906.4d));
-
     }
 
     public ArrayList<Planet> getOrbits() {
@@ -39,6 +39,4 @@ public class SolarSystem {
         }
         return d;
     }
-
-
 }

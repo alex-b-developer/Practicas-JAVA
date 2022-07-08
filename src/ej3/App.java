@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Random Numbers List:");
+        System.out.println("Random Numbers List generated : ");
 
         ArrayList<Integer> listNumber = new ArrayList<Integer>();
 
@@ -19,24 +19,20 @@ public class App {
             System.out.print(listNumber.get(i) + " ");
         }
 
-        System.out.println("\n" + "To order the list");
-        System.out.println("Press 1 to order by bubble sort method");
+        System.out.println("\nPress 1 to order by bubble sort method");
         System.out.println("Press 2 to order by quick sort method");
 
-
-        char data;
-        data = readUserChar();
-
-        Sorter sh = new Sorter();
+        Scanner input_scanner = new Scanner(System.in);
+        char data = input_scanner.nextLine().charAt(0);
 
             switch(data) {
                 case '1':
-                    sh.bubbleSort(listNumber);
+                    Sorter.bubbleSort(listNumber);
                     System.out.println("Array ordered by BubbleSort Method");
                     break;
 
                 case '2':
-                    sh.quickSort(listNumber, 0, listNumber.size()-1);
+                    Sorter.quickSort(listNumber, 0, listNumber.size()-1);
                     System.out.println("Array ordered by QuickSort Method");
                     break;
 
@@ -44,18 +40,8 @@ public class App {
                     System.out.println("No valid data. Array not ordered");
             }
 
-
         for(int i = 0; i < listNumber.size(); i++) {
             System.out.print(listNumber.get(i) + " ");
         }
-
     }
-
-    public static char readUserChar(){
-        Scanner input_scanner = new Scanner(System.in);
-        char data = input_scanner.nextLine().charAt(0);
-
-        return data;
-    }
-
 }

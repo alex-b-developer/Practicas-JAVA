@@ -66,7 +66,7 @@ public class KeyReader {
             Scanner input_scanner = new Scanner(System.in);
             data = input_scanner.nextLine();
 
-            if(isNumeric(data)){
+            if(isNumeric(data) ){
                 flag = false;
             }else{
                 System.out.println("Enter a valid data");

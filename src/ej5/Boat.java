@@ -7,6 +7,12 @@ public class Boat extends Vehicle {
 
     public float longSizeMt;
 
+    /**
+     *
+     * @param passengersNumber
+     * @param registrationDate
+     * @param longSizeMt
+     */
     public Boat(int passengersNumber, Date registrationDate, float longSizeMt){
         super(Vehicle.Type.WATER, 0, passengersNumber, registrationDate);
         this.longSizeMt = longSizeMt;

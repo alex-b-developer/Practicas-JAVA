@@ -3,6 +3,15 @@ package ej4;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * [This is the app Create Vehicles.
+ *
+ * @version [1.01.001 2022-07-04]
+ *
+ * @author [Alexander Betancur - alexbetbu@gmail.com]
+ *
+ */
+
 public class App {
     public static void main(String[] args) {
         System.out.println("Welcome to the program to create 10 Vehicles");
@@ -25,9 +34,15 @@ public class App {
             listVehicle.add(v);
         }
 
-        System.out.println(v.displacementType());
-        System.out.println(v.wheelsNumber());
-        System.out.println(v.passengersNumber());
-        System.out.println(v.registrationDate());
+        for (int i = 0; i > listVehicle.size(); i++) {
+
+            System.out.print("VEHICLE # " + i + " :");
+            System.out.print(listVehicle.get(i).displacementType() + " - ");
+            System.out.print(listVehicle.get(i).wheelsNumber() + " - ");
+            System.out.print(listVehicle.get(i).passengersNumber() + " - ");
+            System.out.println(listVehicle.get(i).registrationDate());
+        }
+
+
     }
 }

@@ -12,6 +12,13 @@ public class Vehicle {
     private Date registrationDate;
     private boolean hasCrew;
 
+    /**
+     *
+     * @param displacementType
+     * @param wheelsNumber
+     * @param passengersNumber
+     * @param registrationDate
+     */
     public Vehicle(Type displacementType, int wheelsNumber, int passengersNumber, Date registrationDate){
         this.displacementType = displacementType;
         this.wheelsNumber = wheelsNumber;

@@ -2,22 +2,32 @@ package ej1;
 
 public class Planet {
 
-    private String id;
+    private static int nextId = 1;
+    private Integer id;
     private String name;
     private Double diameterKm;
     private Double massKg;
     private Double kmFromSun;
 
-    public Planet(String id, String name, Double diameterKm, Double massKg, Double kmFromSun){
+    /**
+     *
+     * @param name
+     * @param diameterKm
+     * @param massKg
+     * @param kmFromSun
+     */
+    public Planet(String name, Double diameterKm, Double massKg, Double kmFromSun){
 
-        this.id = id;
+        this.id = Planet.nextId;
+        Planet.nextId++;
+
         this.name = name;
         this.massKg = massKg;
         this.diameterKm = diameterKm;
         this.kmFromSun = kmFromSun;
     }
 
-    public String id() {
+    public Integer id() {
         return id;
     }
 
@@ -38,7 +48,6 @@ public class Planet {
     }
 
     public Double volume() {
-        //Double v = (4/3) * pi * (diameter()/2)3;
         Double v = (4/3) * 3.1416 * (diameter()/2);
         return v;
     }

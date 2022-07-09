@@ -3,6 +3,15 @@ package ej3;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * [This is the app to sort un Arraylist.
+ *
+ * @version [1.01.001 2022-07-04]
+ *
+ * @author [Alexander Betancur - alexbetbu@gmail.com]
+ *
+ */
+
 public class App {
     public static void main(String[] args) {
         System.out.println("Random Numbers List generated : ");

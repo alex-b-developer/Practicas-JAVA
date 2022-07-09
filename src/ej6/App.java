@@ -1,8 +1,16 @@
 package ej6;
 
 import ej4.KeyReader;
-
 import java.util.*;
+
+/**
+ * [This is the app to read numbers form keyboard.
+ *
+ * @version [1.01.001 2022-07-04]
+ *
+ * @author [Alexander Betancur - alexbetbu@gmail.com]
+ *
+ */
 
 public class App {
     public static void main(String[] args) {

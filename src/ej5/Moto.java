@@ -1,21 +1,22 @@
 package ej5;
 
 import ej4.Vehicle;
+import java.util.Date;
 
 public class Moto extends Vehicle {
 
-    private Type motorType;
+    private MotorType motorType;
 
-    public Moto(Type motorType, Date registrationDate){
-        super(Type.EARTH, 2, 2, registrationDate);
+    public Moto(MotorType motorType, Date registrationDate){
+        super(Vehicle.Type.EARTH, 2, 2, registrationDate);
         this.motorType = motorType;
     }
 
-    public Type motorType() {
+    public MotorType motorType() {
         return motorType;
     }
 
-    public enum Type {
+    public enum MotorType {
         TWOTIMES, FOURTIMES
     }
 }

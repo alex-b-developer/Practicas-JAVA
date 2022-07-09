@@ -1,5 +1,7 @@
 package ej4;
 
+import ej5.Moto;
+
 import java.util.Scanner;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -12,6 +14,23 @@ public class KeyReader {
         System.out.println(message);
         Scanner input_scanner = new Scanner(System.in);
         String data = input_scanner.nextLine();
+
+        return data;
+    }
+
+    public static boolean readUserBoolean(String message){
+        boolean flag = false;
+        boolean data = false;
+        do {
+            try {
+                System.out.println(message);
+                Scanner input_scanner = new Scanner(System.in);
+                data = input_scanner.nextBoolean();
+                flag = true;
+            } catch (Exception e) {
+            System.out.println("Invalid input!");
+            }
+        } while (!flag);
 
         return data;
     }
@@ -56,6 +75,26 @@ public class KeyReader {
 
         return Integer.parseInt(data);
     }
+
+    public static float readUserFloat(String message){
+        String data = "";
+        boolean flag = true;
+
+        while(flag){
+            System.out.println(message);
+            Scanner input_scanner = new Scanner(System.in);
+            data = input_scanner.nextLine();
+
+            if(isFloat(data)){
+                flag = false;
+            }else{
+                System.out.println("Enter a valid data");
+            }
+        }
+
+        return Float.parseFloat(data);
+    }
+
     public static Date readUserDate(){
         boolean flag = true;
         Date date = new Date();
@@ -76,9 +115,40 @@ public class KeyReader {
         return date;
     }
 
+    public static Moto.MotorType readUserMType(String message){
+
+        boolean flag = true;
+        Moto.MotorType data = null;
+
+        do {
+            System.out.println(message);
+            Scanner input_scanner = new Scanner(System.in);
+            String s = input_scanner.nextLine();
+
+            try {
+                data = Moto.MotorType.valueOf(s);
+                flag = false;
+            } catch (Exception e) {
+                System.out.println("\nEnter a valid data: ");
+                System.out.println(java.util.Arrays.asList(Moto.MotorType.values()));
+            }
+
+        }while(flag);
+        return data;
+    }
+
     public static boolean isNumeric(String number){
         try {
             Integer.parseInt(number);
+            return true;
+        } catch (NumberFormatException nfe){
+            return false;
+        }
+    }
+
+    public static boolean isFloat(String number){
+        try {
+            Float.parseFloat(number);
             return true;
         } catch (NumberFormatException nfe){
             return false;
